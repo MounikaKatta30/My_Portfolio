@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mounika Katta | Data Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio of Mounika Katta, Data Engineer working on cloud data platforms, ETL/ELT, and applied AI/ML." />
+
+  <!-- Clean, professional font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+body {
+  background: url("https://raw.githubusercontent.com/MounikaKatta30/Resume/blob/main/background.jpg") center/cover fixed no-repeat;
+  background-color: #f5f6f7;
+}
+
+      --bg: #f4f4f5;
+      --card-bg: #ffffff;
+      --text-main: #111827;
+      --text-muted: #6b7280;
+      --accent: #2563eb;
+      --accent-soft: #dbeafe;
+      --border-subtle: #e5e7eb;
+      --radius-card: 18px;
+      --radius-pill: 999px;
+      --max-width: 920px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #e0f2fe 0, #f9fafb 42%, var(--bg) 100%);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    .page {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 16px 16px 40px;
+    }
+
+    /* Top nav - simple and clean */
+    .top-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4px 0 10px;
+      font-size: 0.88rem;
+    }
+
+    .brand {
+      font-weight: 600;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      padding: 4px 8px;
+      border-radius: var(--radius-pill);
+      color: #4b5563;
+    }
+
+    .nav-links a:hover {
+      background: rgba(148, 163, 184, 0.15);
+      text-decoration: none;
+    }
+
+    /* Hero */
+    .hero {
+      margin-top: 10px;
+      background: var(--card-bg);
+      border-radius: 24px;
+      border: 1px solid var(--border-subtle);
+      padding: 22px 22px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.1fr);
+      gap: 24px;
+      box-shadow: 0 14px 40px rgba(15, 23, 42, 0.08);
+    }
+
+    .hero-text h1 {
+      margin: 0 0 6px;
+      font-size: clamp(1.9rem, 2.3vw + 1.4rem, 2.3rem);
+    }
+
+    .hero-greeting {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .hero-role {
+      margin: 0 0 10px;
+      font-weight: 500;
+      color: #1f2937;
+    }
+
+    .hero-summary {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin: 0 0 14px;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+      font-size: 0.8rem;
+    }
+
+    .tag {
+      padding: 4px 9px;
+      border-radius: var(--radius-pill);
+      background: #f3f4f6;
+      border: 1px solid #e5e7eb;
+      color: #4b5563;
+    }
+
+    .tag-strong {
+      background: var(--accent-soft);
+      border-color: #bfdbfe;
+      color: #1d4ed8;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 16px;
+      border-radius: var(--radius-pill);
+      border: 1px solid transparent;
+      font-size: 0.86rem;
+      cursor: pointer;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background 0.12s ease, box-shadow 0.12s ease, transform 0.08s ease;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #f9fafb;
+      border-color: var(--accent);
+      box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
+    }
+
+    .btn-primary:hover {
+      background: #1d4ed8;
+      text-decoration: none;
+      transform: translateY(-1px);
+      box-shadow: 0 14px 30px rgba(37, 99, 235, 0.45);
+    }
+
+    .btn-ghost {
+      background: #f9fafb;
+      color: #1f2937;
+      border-color: #e5e7eb;
+    }
+
+    .btn-ghost:hover {
+      background: #e5e7eb;
+      text-decoration: none;
+    }
+
+    .hero-contact-line {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+
+    /* Profile photo area (right side) */
+    .hero-photo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .photo-frame {
+      width: 210px;
+      height: 210px;
+      border-radius: 32px;
+      background: radial-gradient(circle at top left, #bfdbfe, #e5e7eb);
+      border: 1px solid #d1d5db;
+      box-shadow: 0 18px 35px rgba(15, 23, 42, 0.24);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .photo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Sections */
+    main {
+      margin-top: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    section {
+      background: var(--card-bg);
+      border-radius: var(--radius-card);
+      border: 1px solid var(--border-subtle);
+      padding: 14px 16px 16px;
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.03);
+    }
+
+    section h2 {
+      margin: 0 0 6px;
+      font-size: 1.02rem;
+    }
+
+    section p {
+      margin: 4px 0 8px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .section-subtitle {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .pill {
+      padding: 4px 9px;
+      border-radius: var(--radius-pill);
+      border: 1px solid #e5e7eb;
+      font-size: 0.8rem;
+      color: #374151;
+      background: #f9fafb;
+    }
+
+    .pill-strong {
+      background: var(--accent-soft);
+      border-color: #bfdbfe;
+      color: #1d4ed8;
+    }
+
+    .project-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 10px;
+      margin-top: 6px;
+    }
+
+    .project-card {
+      background: #f9fafb;
+      border-radius: 14px;
+      border: 1px solid #e5e7eb;
+      padding: 10px 12px;
+      font-size: 0.86rem;
+    }
+
+    .project-title {
+      font-weight: 600;
+      margin-bottom: 2px;
+      color: #111827;
+    }
+
+    .project-meta {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .project-card p {
+      font-size: 0.86rem;
+      margin: 0 0 4px;
+      color: #4b5563;
+    }
+
+    .contact-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 4px 0 0;
+      font-size: 0.9rem;
+      color: #4b5563;
+    }
+
+    .contact-list li {
+      margin-bottom: 4px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.78rem;
+      color: #9ca3af;
+      margin-top: 16px;
+    }
+
+    @media (max-width: 720px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .hero-photo {
+        order: -1;
+      }
+    .photo-frame {
+  width: 260px;
+  height: 260px;
+  border-radius: 38px;
+  overflow: hidden;
+  border: 1px solid #d1d5db;
+  box-shadow: 0 18px 35px rgba(15, 23, 42, 0.24);
+}
+
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+    
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- Simple top nav -->
+    <header class="top-nav" aria-label="Main">
+      <div class="brand">Mounika Katta</div>
+      <nav class="nav-links" aria-label="Page sections">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#ai-ml">AI &amp; ML</a>
+        <a href="#experience">Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Hero: text left, photo right -->
+    <section class="hero" aria-labelledby="intro-title">
+      <div class="hero-text">
+        <p class="hero-greeting">Hello,</p>
+        <h1 id="intro-title">I’m Mounika Katta</h1>
+        <p class="hero-role">Data Engineer focused on cloud data platforms, ETL/ELT, and analytics.</p>
+
+        <p class="hero-summary">
+          I’m a data engineer who has worked across healthcare, wealth management, finance and banking
+          I enjoy taking real-world problems, breaking them down into understandable pieces, and building reliable
+          systems that turn data into decisions. I’ve learned that the value isn’t in pipelines or dashboards alone it’s in helping people trust what they’re looking at and act on it with confidence.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary"
+             href="https://github.com/MounikaKatta30/Resume/blob/main/MK_DE_Resume.pdf"
+             target="_blank" rel="noopener">
+            View Resume
+          </a>
+
+          <a class="btn btn-ghost" href="#experience">
+            View My Work
+          </a>
+        </div>
+
+        <p class="hero-contact-line">
+          Based in Hartford, CT · Open to relocate
+        </p>
+      </div>
+
+      <div class="hero-photo" aria-label="Profile photo">
+        <div class="photo-frame">
+  <img src="https://raw.githubusercontent.com/MounikaKatta30/Resume/main/profile.jpeg" alt="Profile photo of Mounika Katta">
+</div>
+
+      </div>
+    </section>
+
+    <main>
+      <!-- About -->
+      <section id="about">
+        <h2>About</h2>
+        <p>
+          I started my career as a Data Analyst, building SQL reports and BI dashboards, and grew into
+          data engineering by owning cloud-native pipelines, data models, and governance. Most of my work
+          sits at the intersection of engineering and analytics: making sure data is not just collected,
+          but actually usable and reliable.
+        </p>
+      </section>
+
+      <!-- Skills (short & high-level) -->
+      <section id="skills">
+        <h2>Core Skills</h2>
+        <p class="section-subtitle">
+          A combination of data engineering, analytics, and real-world problem solving.
+        </p>
+
+        <div class="pill-row">
+          <span class="pill pill-strong">Data Engineering</span>
+          <span class="pill pill-strong">Data Modeling</span>
+          <span class="pill pill-strong">ETL / ELT Pipelines</span>
+          <span class="pill">Analytics Engineering</span>
+          <span class="pill">Data Quality &amp; Lineage</span>
+          <span class="pill">Query Optimization</span>
+          <span class="pill">Real-Time Data Processing</span>
+          <span class="pill">Root-Cause Analysis</span>
+          <span class="pill">Data Validation</span>
+          <span class="pill">Dashboard Design</span>
+          <span class="pill">Business Reporting</span>
+        </div>
+
+        <p class="section-subtitle" style="margin-top: 14px;">
+          Domains I’ve worked in:
+        </p>
+
+        <div class="pill-row">
+          <span class="pill">Healthcare</span>
+          <span class="pill">Finance</span>
+          <span class="pill">Banking</span>
+          <span class="pill">Wealth Management</span>
+          <span class="pill">B2B SaaS</span>
+          <span class="pill">E-commerce</span>
+        </div>
+      </section>
+
+      <!-- AI & ML Section -->
+      <section id="ai-ml">
+        <h2>AI &amp; ML Work</h2>
+        <p class="section-subtitle">
+          I also build applied ML and GenAI systems from classical models to LLM-based pipelines.
+        </p>
+
+        <div class="pill-row">
+          <span class="pill pill-strong">LLMs · RAG · LlamaIndex</span>
+          <span class="pill pill-strong">NLP · Transformers</span>
+          <span class="pill">Text Classification</span>
+          <span class="pill">Text Summarization</span>
+          <span class="pill">CNN-based Video Analysis</span>
+          <span class="pill">ML Model Deployment</span>
+          <span class="pill">Python · scikit-learn · Hugging Face</span>
+        </div>
+
+        <div class="project-list" style="margin-top: 14px;">
+          <!-- Project 1 -->
+          <div class="project-card">
+            <div class="project-title">Violence Detection ML System</div>
+            <div class="project-meta">CNN · Video Processing · Secure Pipeline</div>
+            <p>
+              Built an end-to-end pipeline to detect violent content in uploaded videos using CNN models,
+              secure preprocessing, and real-time alerts.
+            </p>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card">
+            <div class="project-title">Word-Level Transformer on WikiText-103</div>
+            <div class="project-meta">Transformers · BPE Tokenization · Perplexity Evaluation</div>
+            <p>
+              Implemented a word-level Transformer language model on the WikiText-103 dataset, focusing on
+              handling a large vocabulary efficiently with BPE-based tokenization and perplexity-based evaluation.
+            </p>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card">
+            <div class="project-title">Text Summarization Pipeline</div>
+            <div class="project-meta">Llama-3 · Phi-3 · H2O Models</div>
+            <p>
+              Built an LLM-powered summarization workflow with batching, preprocessing, and evaluation
+              across multiple language models.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience">
+        <h2>Real-Time Experience</h2>
+        <p class="section-subtitle">
+          Work across healthcare, finance, banking and wealth management combining data engineering, analytics, and applied ML.
+        </p>
+
+        <div class="project-list">
+
+          <!-- Experience 1 -->
+          <div class="project-card">
+            <div class="project-title">Data Platform Modernization</div>
+            <p>
+              Rebuilt legacy reporting environments into structured data platforms, focusing on reliable pipelines,
+              cleaner models, and trusted metrics for day-to-day decision making.
+            </p>
+            <div class="pill-row">
+              <span class="pill pill-strong">Data Engineering</span>
+              <span class="pill pill-strong">ETL / ELT</span>
+              <span class="pill">Data Modeling</span>
+              <span class="pill">Data Quality &amp; Validation</span>
+              <span class="pill">Operational Analytics</span>
+            </div>
+          </div>
+
+          <!-- Experience 2 -->
+          <div class="project-card">
+            <div class="project-title">Healthcare Analytics &amp; Experience Insights</div>
+            <p>
+              Helped teams understand patient journeys, program performance, and risk patterns, using analytics and
+              ML where it added real value instead of complexity.
+            </p>
+            <div class="pill-row">
+              <span class="pill pill-strong">AI / ML</span>
+              <span class="pill">Classification Models</span>
+              <span class="pill">Churn &amp; Risk Scoring</span>
+              <span class="pill">Healthcare Analytics</span>
+              <span class="pill">Dashboard Storytelling</span>
+            </div>
+          </div>
+
+          <!-- Experience 3 -->
+          <div class="project-card">
+            <div class="project-title">Wealth &amp; Operational Intelligence</div>
+            <p>
+              Supported stakeholders with clear views of performance, bottlenecks, and trends, using automation and
+              light NLP to turn complex data and reports into simple, usable insights.
+            </p>
+            <div class="pill-row">
+              <span class="pill pill-strong">Business Reporting</span>
+              <span class="pill">Automation</span>
+              <span class="pill">NLP &amp; Summarization</span>
+              <span class="pill">KPI Design</span>
+              <span class="pill">Decision Support</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact">
+        <h2>Contact</h2>
+        <p class="section-subtitle">
+          Best way to reach me is email or LinkedIn. I’m open to data engineering, analytics engineering,
+          and applied AI roles.
+        </p>
+        <ul class="contact-list">
+          <li><strong>Email:</strong> <a href="mailto:mounikakatta070699@gmail.com">mounikakatta070699@gmail.com</a></li>
+          <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/mounika-katta-7387a7135" target="_blank" rel="noopener">https://www.linkedin.com/in/mounika-katta-7387a7135</a></li>
+          <li><strong>GitHub:</strong> <a href="https://github.com/MounikaKatta30" target="_blank" rel="noopener">https://github.com/MounikaKatta30</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="year"></span> Mounika Katta. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    // Set current year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
