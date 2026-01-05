@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>Mounika Katta | Data Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Portfolio of Mounika Katta, Data Engineer working on cloud data platforms, ETL/ELT, and applied AI/ML." />
+  <meta name="description" content="Portfolio of Mounika Katta, Data Engineer working on cloud data platforms, ELT/ETL, streaming, governance, and applied AI/ML." />
 
   <!-- Clean, professional font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,11 +13,6 @@
 
   <style>
     :root {
-body {
-  background: url("https://raw.githubusercontent.com/MounikaKatta30/My_Portfolio/blob/main/background.jpg") center/cover fixed no-repeat;
-  background-color: #f5f6f7;
-}
-
       --bg: #f4f4f5;
       --card-bg: #ffffff;
       --text-main: #111827;
@@ -37,7 +32,10 @@ body {
     body {
       margin: 0;
       font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #e0f2fe 0, #f9fafb 42%, var(--bg) 100%);
+      background:
+        radial-gradient(circle at top, #e0f2fe 0, #f9fafb 42%, var(--bg) 100%),
+        url("https://raw.githubusercontent.com/MounikaKatta30/My_Portfolio/main/background.jpg") center/cover fixed no-repeat;
+      background-color: #f5f6f7;
       color: var(--text-main);
       line-height: 1.6;
     }
@@ -339,22 +337,20 @@ body {
       .hero-photo {
         order: -1;
       }
-    .photo-frame {
-  width: 260px;
-  height: 260px;
-  border-radius: 38px;
-  overflow: hidden;
-  border: 1px solid #d1d5db;
-  box-shadow: 0 18px 35px rgba(15, 23, 42, 0.24);
-}
-
-.photo-frame img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-    
+      .photo-frame {
+        width: 260px;
+        height: 260px;
+        border-radius: 38px;
+        overflow: hidden;
+        border: 1px solid #d1d5db;
+        box-shadow: 0 18px 35px rgba(15, 23, 42, 0.24);
+      }
+      .photo-frame img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
   </style>
 </head>
 <body>
@@ -376,17 +372,17 @@ body {
       <div class="hero-text">
         <p class="hero-greeting">Hello,</p>
         <h4 id="intro-title">I’m Mounika Katta</h4>
-        <p class="hero-role">Data Engineer focused on cloud data platforms, ETL/ELT, and analytics.</p>
+        <p class="hero-role">Data Engineer specializing in cloud-native ELT, analytics engineering, and event-driven data platforms.</p>
 
         <p class="hero-summary">
-          I’m a data engineer who has worked across healthcare, wealth management, finance and banking
-          I enjoy taking real-world problems, breaking them down into understandable pieces, and building reliable
-          systems that turn data into decisions. I’ve learned that the value isn’t in pipelines or dashboards alone it’s in helping people trust what they’re looking at and act on it with confidence.
+          I build scalable, analytics-ready data platforms across finance, healthcare, and wealth management.
+          My focus is reliable ingestion, transformation, and governance: automated pipelines, modular dbt models,
+          streaming where it adds value, and curated datasets that teams can trust for operational and executive decisions.
         </p>
 
         <div class="hero-actions">
           <a class="btn btn-primary"
-             href="https://github.com/MounikaKatta30/Resume/blob/main/MK_DE_Resume.pdf"
+             href="https://github.com/MounikaKatta30/Resume/blob/main/MK_DE.pdf"
              target="_blank" rel="noopener">
             View Resume
           </a>
@@ -403,9 +399,8 @@ body {
 
       <div class="hero-photo" aria-label="Profile photo">
         <div class="photo-frame">
-  <img src="https://raw.githubusercontent.com/MounikaKatta30/My_Portfolio/main/profile.jpeg" alt="Profile photo of Mounika Katta">
-</div>
-
+          <img src="https://raw.githubusercontent.com/MounikaKatta30/My_Portfolio/main/profile.jpeg" alt="Profile photo of Mounika Katta">
+        </div>
       </div>
     </section>
 
@@ -414,10 +409,9 @@ body {
       <section id="about">
         <h2>About</h2>
         <p>
-          I started my career as a Data Analyst, building SQL reports and BI dashboards, and grew into
-          data engineering by owning cloud-native pipelines, data models, and governance. Most of my work
-          sits at the intersection of engineering and analytics: making sure data is not just collected,
-          but actually usable and reliable.
+          I started as a Data Analyst building SQL reports and BI dashboards, then moved into data engineering by owning
+          ELT pipelines, warehouse modeling, and governance. I care about correctness and reliability: lineage, quality checks,
+          security controls, and performance tuning that make data products production-ready.
         </p>
       </section>
 
@@ -425,7 +419,7 @@ body {
       <section id="skills">
         <h2>Core Skills</h2>
         <p class="section-subtitle">
-          A combination of data engineering, analytics, and real-world problem solving.
+          Cloud data engineering with strong modeling, governance, observability, and delivery discipline.
         </p>
 
         <div class="pill-row">
@@ -435,11 +429,11 @@ body {
           <span class="pill">Analytics Engineering</span>
           <span class="pill">Data Quality &amp; Lineage</span>
           <span class="pill">Query Optimization</span>
-          <span class="pill">Real-Time Data Processing</span>
+          <span class="pill">Streaming &amp; Event-Driven</span>
           <span class="pill">Root-Cause Analysis</span>
           <span class="pill">Data Validation</span>
-          <span class="pill">Dashboard Design</span>
-          <span class="pill">Business Reporting</span>
+          <span class="pill">Governance &amp; Security</span>
+          <span class="pill">Self-Service Analytics</span>
         </div>
 
         <p class="section-subtitle" style="margin-top: 14px;">
@@ -460,16 +454,16 @@ body {
       <section id="ai-ml">
         <h2>AI &amp; ML Work</h2>
         <p class="section-subtitle">
-          I also build applied ML and GenAI systems from classical models to LLM-based pipelines.
+          Applied ML and GenAI systems built with measurable outcomes, strong preprocessing, and production-minded pipelines.
         </p>
 
         <div class="pill-row">
           <span class="pill pill-strong">LLMs · RAG · LlamaIndex</span>
           <span class="pill pill-strong">NLP · Transformers</span>
-          <span class="pill">Text Classification</span>
-          <span class="pill">Text Summarization</span>
-          <span class="pill">CNN-based Video Analysis</span>
-          <span class="pill">ML Model Deployment</span>
+          <span class="pill">Classification</span>
+          <span class="pill">Summarization</span>
+          <span class="pill">CNN Video Models</span>
+          <span class="pill">Model Evaluation</span>
           <span class="pill">Python · scikit-learn · Hugging Face</span>
         </div>
 
@@ -477,20 +471,20 @@ body {
           <!-- Project 1 -->
           <div class="project-card">
             <div class="project-title">Violence Detection ML System</div>
-            <div class="project-meta">CNN · Video Processing · Secure Pipeline</div>
+            <div class="project-meta">CNN · Video Pipeline · Secure Processing</div>
             <p>
-              Built an end-to-end pipeline to detect violent content in uploaded videos using CNN models,
-              secure preprocessing, and real-time alerts.
+              Built an end-to-end video inference workflow with secure preprocessing, model scoring, and alerting,
+              designed for reliability and safe handling of uploaded content in a web application environment.
             </p>
           </div>
 
           <!-- Project 2 -->
           <div class="project-card">
             <div class="project-title">Word-Level Transformer on WikiText-103</div>
-            <div class="project-meta">Transformers · BPE Tokenization · Perplexity Evaluation</div>
+            <div class="project-meta">Transformers · Tokenization · Perplexity</div>
             <p>
-              Implemented a word-level Transformer language model on the WikiText-103 dataset, focusing on
-              handling a large vocabulary efficiently with BPE-based tokenization and perplexity-based evaluation.
+              Implemented a Transformer language model on WikiText-103 with tokenization and perplexity-based evaluation,
+              focusing on efficient handling of large vocabularies and stable training for language modeling experiments.
             </p>
           </div>
 
@@ -499,8 +493,8 @@ body {
             <div class="project-title">Text Summarization Pipeline</div>
             <div class="project-meta">Llama-3 · Phi-3 · H2O Models</div>
             <p>
-              Built an LLM-powered summarization workflow with batching, preprocessing, and evaluation
-              across multiple language models.
+              Developed an LLM summarization workflow with preprocessing, batching, inference, and evaluation across models,
+              optimizing throughput and output consistency for long-form text summarization use cases.
             </p>
           </div>
         </div>
@@ -510,7 +504,7 @@ body {
       <section id="experience">
         <h2>Real-Time Experience</h2>
         <p class="section-subtitle">
-          Work across healthcare, finance, banking and wealth management combining data engineering, analytics, and applied ML.
+          Production work across finance, healthcare, banking, and wealth management using ELT, warehousing, streaming, and governed BI enablement.
         </p>
 
         <div class="project-list">
@@ -519,15 +513,15 @@ body {
           <div class="project-card">
             <div class="project-title">Data Platform Modernization</div>
             <p>
-              Rebuilt legacy reporting environments into structured data platforms, focusing on reliable pipelines,
-              cleaner models, and trusted metrics for day-to-day decision making.
+              Migrated legacy reporting into governed cloud data platforms by building automated pipelines,
+              modular transformation layers, and performance-tuned warehouse models to deliver trusted datasets for analytics and operational reporting.
             </p>
             <div class="pill-row">
               <span class="pill pill-strong">Data Engineering</span>
               <span class="pill pill-strong">ETL / ELT</span>
-              <span class="pill">Data Modeling</span>
-              <span class="pill">Data Quality &amp; Validation</span>
-              <span class="pill">Operational Analytics</span>
+              <span class="pill">Warehouse Modeling</span>
+              <span class="pill">Quality &amp; Validation</span>
+              <span class="pill">Observability</span>
             </div>
           </div>
 
@@ -535,15 +529,15 @@ body {
           <div class="project-card">
             <div class="project-title">Healthcare Analytics &amp; Experience Insights</div>
             <p>
-              Helped teams understand patient journeys, program performance, and risk patterns, using analytics and
-              ML where it added real value instead of complexity.
+              Built analytics pipelines and dashboards for patient experience, and applied ML where it mattered,
+              including churn-style risk insights and fraud classification, supported by reproducible preprocessing and evaluation.
             </p>
             <div class="pill-row">
               <span class="pill pill-strong">AI / ML</span>
-              <span class="pill">Classification Models</span>
-              <span class="pill">Churn &amp; Risk Scoring</span>
+              <span class="pill">NLP Classification</span>
+              <span class="pill">Risk Modeling</span>
               <span class="pill">Healthcare Analytics</span>
-              <span class="pill">Dashboard Storytelling</span>
+              <span class="pill">Power BI</span>
             </div>
           </div>
 
@@ -551,14 +545,14 @@ body {
           <div class="project-card">
             <div class="project-title">Wealth &amp; Operational Intelligence</div>
             <p>
-              Supported stakeholders with clear views of performance, bottlenecks, and trends, using automation and
-              light NLP to turn complex data and reports into simple, usable insights.
+              Delivered portfolio-level reporting and automation by aligning business workflows to CRM and BI,
+              improving KPI consistency, reducing manual reporting cycles, and enabling self-service analytics for property and finance stakeholders.
             </p>
             <div class="pill-row">
               <span class="pill pill-strong">Business Reporting</span>
               <span class="pill">Automation</span>
-              <span class="pill">NLP &amp; Summarization</span>
               <span class="pill">KPI Design</span>
+              <span class="pill">UAT &amp; Enablement</span>
               <span class="pill">Decision Support</span>
             </div>
           </div>
@@ -570,8 +564,7 @@ body {
       <section id="contact">
         <h2>Contact</h2>
         <p class="section-subtitle">
-          Best way to reach me is email or LinkedIn. I’m open to data engineering, analytics engineering,
-          and applied AI roles.
+          Best way to reach me is email or LinkedIn. I’m open to Data Engineering and Analytics Engineering roles focused on cloud data platforms, ELT, streaming, governance, and trusted self-service datasets.
         </p>
         <ul class="contact-list">
           <li><strong>Email:</strong> <a href="mailto:mounikakatta070699@gmail.com">mounikakatta070699@gmail.com</a></li>
@@ -592,5 +585,3 @@ body {
   </script>
 </body>
 </html>
-
-
